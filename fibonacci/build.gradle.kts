@@ -2,7 +2,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-group = "io.github.pahill"
+group = "io.github.kotlin-hands-on"
 version = "1.0.6"
 
 plugins {
@@ -40,7 +40,7 @@ kotlin {
 }
 
 android {
-    namespace = "io.github.pahill.fibonacci"
+    namespace = "io.github.kotlinhandson.fibonacci"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -52,13 +52,13 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates("io.github.pahill", "fibonacci", "1.0.6")
+    coordinates("io.github.kotlin-hands-on", "fibonacci", "1.0.6")
 
     pom {
         name.set("Fibonacci library")
         description.set("A description of what my library does.")
         inceptionYear.set("2024")
-        url.set("https://github.com/pahill/fibonacci/")
+        url.set("https://github.com/kotlin-hands-on/fibonacci/")
         licenses {
             license {
                 name.set("The Apache License, Version 2.0")
@@ -68,15 +68,15 @@ mavenPublishing {
         }
         developers {
             developer {
-                id.set("pahill")
-                name.set("Pamela Hill")
-                url.set("https://github.com/pahill/")
+                id.set("kotlin-hands-on")
+                name.set("Kotlin Developer Advocate")
+                url.set("https://github.com/kotlin-hands-on/")
             }
         }
         scm {
-            url.set("https://github.com/pahill/fibonacci/")
-            connection.set("scm:git:git://github.com/pahill/fibonacci.git")
-            developerConnection.set("scm:git:ssh://git@github.com/pahill/fibonacci.git")
+            url.set("https://github.com/kotlin-hands-on/fibonacci/")
+            connection.set("scm:git:git://github.com/kotlin-hands-on/fibonacci.git")
+            developerConnection.set("scm:git:ssh://git@github.com/kotlin-hands-on/fibonacci.git")
         }
     }
 }

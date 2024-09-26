@@ -1,4 +1,4 @@
-package io.github.pahill.fibonacci
+package io.github.kotlinhandson.fibonacci
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
