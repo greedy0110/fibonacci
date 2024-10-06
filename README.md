@@ -98,7 +98,7 @@ Let’s take a look at the key we’ve created with the following command:
 
 The output will look something like this:
 
-| `pub   ed25519 2024-10-06 [SC] `<br>`       F175482952A225BFC4A07A715EE6B5F76620B385CE uid `<br>`           [ultimate] Your name <your email address>` <br> `sub   cv25519 2024-10-06 [E]` |
+| `pub   ed25519 2024-10-06 [SC] `<br>`       F175482952A225BFC4A07A715EE6B5F76620B385CE`<br>`uid           [ultimate] Your name <your email address>` <br> `sub   cv25519 2024-10-06 [E]` |
 | :---- |
 
 You’ll need to use the long alphanumerical identifier of your key displayed here in the following steps.
@@ -123,7 +123,7 @@ This will create a `key.gpg` file which contains your private key. Remember not 
 
 If you check the contents of the file, you should see contents similar to this:
 
-| `-----BEGIN PGP PRIVATE KEY BLOCK-----`<br>`lQdGBGby2X4BEACvFj7cxScsaBpjty60ehgB6xRmt8ayt+zmgB8p+z8njF7m2XiN`<br>`bpD/h7ZI7FC0Db2uCU4CYdZoQVl0MNNC1Yr56Pa68qucadJhY0sFNiB63KrBUoiO ... SQ== =Qh2r`<br> -----END PGP PRIVATE KEY BLOCK-----` |
+| `-----BEGIN PGP PRIVATE KEY BLOCK-----`<br>`lQdGBGby2X4BEACvFj7cxScsaBpjty60ehgB6xRmt8ayt+zmgB8p+z8njF7m2XiN`<br>`bpD/h7ZI7FC0Db2uCU4CYdZoQVl0MNNC1Yr56Pa68qucadJhY0sFNiB63KrBUoiO ... SQ== =Qh2r`<br> `-----END PGP PRIVATE KEY BLOCK-----` |
 | :---- |
 
 ### Generate the user token {#generate-the-user-token}
