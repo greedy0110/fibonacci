@@ -12,7 +12,7 @@ Note that no other actions or tools usually required for the library development
 (https://kotlinlang.org/docs/jvm-api-guidelines-backward-compatibility.html#tools-designed-to-enforce-backward-compatibility), explicit API mode,
 licensing, contribution guideline, code of conduct and others.
 
-## How to publish
+## How to publish?
 
 This guide describes the steps of publishing a library built with Kotlin Multiplatform to the [Maven Central repository](https://central.sonatype.com/). To publish your library, you’ll need to:
 
