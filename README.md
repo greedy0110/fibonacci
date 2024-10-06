@@ -86,7 +86,7 @@ Next, you’ll be prompted to set the expiration of the key. If you choose to cr
 
 You will be asked for your real name, email, and a comment. You can leave the comment empty.
 
-|`Please select what kind of key you want:` <br> `(1) RSA and RSA`  <br> `(2) DSA and Elgamal`  <br> `(3) DSA (sign only)`  <br> `(4) RSA (sign only)`  <br> `(9) ECC (sign and encrypt) *default*`  <br> `(10) ECC (sign only)   `  <br> `(14) Existing key from card`  <br> ` Your selection? 9`  <br> `Please select which elliptic curve you want:`  <br> `(1) Curve 25519 *default*`  <br> `(4) NIST P-384`  <br> `(6) Brainpool P-256`  <br> `Your selection? 1 `  <br> `Please specify how long the key should be valid.`  <br> `0 = key does not expire`  <br> `<n>  = key expires in n days`  <br> `<n>w = key expires in n weeks`  <br> `<n>m = key expires in n months`  <br> `<n>y = key expires in n years`  <br> `Key is valid for? (0) 0`  <br> `Key does not expire at all`   <br> `Is this correct? (y/N) y `  <br> `GnuPG needs to construct a user ID to identify your key.` |
+|`Please select what kind of key you want:` <br> `(1) RSA and RSA`  <br> `(2) DSA and Elgamal`  <br> `(3) DSA (sign only)`  <br> `(4) RSA (sign only)`  <br> `(9) ECC (sign and encrypt) *default*`  <br> `(10) ECC (sign only)   `  <br> `(14) Existing key from card`  <br> ` Your selection? 9`  <br><br> `Please select which elliptic curve you want:`  <br> `(1) Curve 25519 *default*`  <br> `(4) NIST P-384`  <br> `(6) Brainpool P-256`  <br> `Your selection? 1 `  <br><br> `Please specify how long the key should be valid.`  <br> `0 = key does not expire`  <br> `<n>  = key expires in n days`  <br> `<n>w = key expires in n weeks`  <br> `<n>m = key expires in n months`  <br> `<n>y = key expires in n years`  <br> `Key is valid for? (0) 0`  <br> `Key does not expire at all`   <br><br> `Is this correct? (y/N) y `  <br> `GnuPG needs to construct a user ID to identify your key.` |
 | :--- |
 
 You will be asked for a passphrase to encrypt the key, which you have to repeat. Keep this passphrase stored securely and privately. You’ll be using it later to access the private key.
@@ -98,7 +98,7 @@ Let’s take a look at the key we’ve created with the following command:
 
 The output will look something like this:
 
-| `pub   ed25519 2024-10-06 [SC] `<br>`       F175482952A225BFC4A07A715EE6B5F76620B385CE`<br>`uid           [ultimate] Your name <your email address>` <br> `sub   cv25519 2024-10-06 [E]` |
+| `pub   ed25519 2024-10-06 [SC] `<br>`       F175482952A225BFC4A07A715EE6B5F76620B385CE`<br>`uid   [ultimate] Your name <your email address>` <br> `sub   cv25519 2024-10-06 [E]` |
 | :---- |
 
 You’ll need to use the long alphanumerical identifier of your key displayed here in the following steps.
@@ -132,8 +132,8 @@ Your project will also need to authenticate with Maven Central to upload artifac
 
 The output will look like the example below, containing a username and a password. Store this information securely, as it can’t be viewed again on the Central Portal. If you lose these credentials, you’ll need to generate new ones later.
 
-| `<server>`<br>      `<id>${server}</id>`<br>`      <username>l3nfaPmz</username>`<br>`    <password>gh9jT9XfnGtUngWTZwTu/8241keYdmQpipqLPRKeDLTh</password>`<br>`  </server>` |
-| :---- |
+| `<server>`<br>`      <id>${server}</id>`<br>`      <username>l3nfaPmz</username>`<br>`    <password<gh9jT9XfnGtUngWTZwTu/8241keYdmQpipqLPRKeDLTh</password>`<br>`  </server>` |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Configure the project
 
