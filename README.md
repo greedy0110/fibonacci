@@ -123,7 +123,7 @@ This will create a `key.gpg` file which contains your private key. Remember not 
 
 If you check the contents of the file, you should see contents similar to this:
 
-| `-----BEGIN PGP PRIVATE KEY BLOCK-----`<br>`lQdGBGby2X4BEACvFj7cxScsaBpjty60ehgB6xRmt8ayt+zmgB8p+z8njF7m2XiN`<br>`bpD/h7ZI7FC0Db2uCU4CYdZoQVl0MNNC1Yr56Pa68qucadJhY0sFNiB63KrBUoiO ... SQ== =Qh2r`<br> `-----END PGP PRIVATE KEY BLOCK-----` |
+| `-----BEGIN PGP PRIVATE KEY BLOCK-----`<br>`lQdGBGby2X4BEACvFj7cxScsaBpjty60ehgB6xRmt8ayt+zmgB8p+z8njF7m2XiN`<br>`bpD/h7ZI7FC0Db2uCU4CYdZoQVl0MNNC1Yr56Pa68qucadJhY0sFNiB63KrBUoiO `<br>`... SQ== =Qh2r`<br> `-----END PGP PRIVATE KEY BLOCK-----` |
 | :---- |
 
 ### Generate the user token {#generate-the-user-token}
@@ -132,7 +132,7 @@ Your project will also need to authenticate with Maven Central to upload artifac
 
 The output will look like the example below, containing a username and a password. Store this information securely, as it can’t be viewed again on the Central Portal. If you lose these credentials, you’ll need to generate new ones later.
 
-| `<server>      <id>${server}</id>      <username>l3nfaPmz</username>    <password>gh9jT9XfnGtUngWTZwTu/8241keYdmQpipqLPRKeDLTh</password>  </server>` |
+| `<server>`<br>      `<id>${server}</id>`<br>`      <username>l3nfaPmz</username>`<br>`    <password>gh9jT9XfnGtUngWTZwTu/8241keYdmQpipqLPRKeDLTh</password>`<br>`  </server>` |
 | :---- |
 
 ## Configure the project
@@ -143,7 +143,7 @@ If you started developing your library from a template project, this is a good t
 
 If you have an Android target in your project, you should follow the [steps to prepare your Android library release](https://developer.android.com/build/publish-library/prep-lib-release). This, at a minimum, requires you to [specify an appropriate namespace](https://developer.android.com/build/publish-library/prep-lib-release#choose-namespace) for your library, so that a unique R class will be generated when their resources are compiled.  Notice that the namespace is different from the Maven namespace created in the [Register a namespace](#register-a-namespace) section above.
 
-| `android {     namespace = "io.github.kotlinhandson.fibonacci" }` |
+| `android {`<br>`     namespace = "io.github.kotlinhandson.fibonacci"`<br>` }` |
 | :---- |
 
 ## Set up the publishing plugin
@@ -152,14 +152,14 @@ This guide uses [vanniktech/gradle-maven-publish-plugin](https://github.com/vann
 
 To add the plugin to your project, add the following line in the plugins block, in your library module’s `build.gradle.kts` file:
 
-| `plugins {     id("com.vanniktech.maven.publish") version "0.29.0" }` |
+| `plugins {`<br>`     id("com.vanniktech.maven.publish") version "0.29.0" `<br>`}` |
 | :---- |
 
 *Note: for the latest available version of the plugin, check its [releases page](https://github.com/vanniktech/gradle-maven-publish-plugin/releases).*
 
 In the same file, add the following configuration. Customize all these values appropriately for your library.
 
-| `mavenPublishing {     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)     signAllPublications()     coordinates("io.github.kotlin-hands-on", "fibonacci", "1.0.3")     pom {         name.set("Fibonacci library")         description.set("A mathematics calculation library.")         inceptionYear.set("2024")         url.set("https://github.com/kotlin-hands-on/fibonacci/")         licenses {             license {                 name.set("The Apache License, Version 2.0")                 url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")                 distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")             }         }         developers {             developer {                 id.set("kotlin-hands-on")                 name.set("Kotlin Developer Advocate")                 url.set("https://github.com/kotlin-hands-on/")             }         }         scm {             url.set("https://github.com/kotlin-hands-on/fibonacci/")             connection.set("scm:git:git://github.com/kotlin-hands-on/fibonacci.git")            developerConnection.set("scm:git:ssh://git@github.com/kotlin-hands-on/fibonacci.git")         }     } }` |
+| `mavenPublishing {`<br>`     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)`<br>`     signAllPublications()`<br>`     coordinates("io.github.kotlin-hands-on", "fibonacci", "1.0.3")`<br>`     pom {`<br>`         name.set("Fibonacci library")`<br>`         description.set("A mathematics calculation library.")`<br>`         inceptionYear.set("2024")`<br>`         url.set("https://github.com/kotlin-hands-on/fibonacci/")`<br>`         licenses {`<br>`             license {`<br>`                 name.set("The Apache License, Version 2.0")`<br>`                 url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")`<br>`                 distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")`<br>`             }`<br>`         }`<br>`         developers {`<br>`             developer {`<br>`                 id.set("kotlin-hands-on")`<br>`                 name.set("Kotlin Developer Advocate")`<br>`                 url.set("https://github.com/kotlin-hands-on/")`<br>`             }`<br>`         }`<br>`         scm {`<br>`             url.set("https://github.com/kotlin-hands-on/fibonacci/")`<br>`             connection.set("scm:git:git://github.com/kotlin-hands-on/fibonacci.git")`<br>`            developerConnection.set("scm:git:ssh://git@github.com/kotlin-hands-on/fibonacci.git")`<br>`         }`<br>`     }`<br>` }` |
 | :---- |
 
 Note that it’s also possible to use Gradle properties instead.
