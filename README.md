@@ -132,8 +132,8 @@ Your project will also need to authenticate with Maven Central to upload artifac
 
 The output will look like the example below, containing a username and a password. Store this information securely, as it can’t be viewed again on the Central Portal. If you lose these credentials, you’ll need to generate new ones later.
 
-| `<server>`<br>`      <id>${server}</id>`<br>`      <username>l3nfaPmz</username>`<br>`    <password<gh9jT9XfnGtUngWTZwTu/8241keYdmQpipqLPRKeDLTh</password>`<br>`  </server>` |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<server>`<br>`      <id>${server}</id>`<br>`      <username>l3nfaPmz</username>`<br>`      <password<gh9jT9XfnGtUngWTZwTu/8241keYdmQpipqLPRKeDLTh</password>`<br>`</server>` |
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ### Configure the project
 
@@ -143,8 +143,8 @@ If you started developing your library from a template project, this is a good t
 
 If you have an Android target in your project, you should follow the [steps to prepare your Android library release](https://developer.android.com/build/publish-library/prep-lib-release). This, at a minimum, requires you to [specify an appropriate namespace](https://developer.android.com/build/publish-library/prep-lib-release#choose-namespace) for your library, so that a unique R class will be generated when their resources are compiled.  Notice that the namespace is different from the Maven namespace created in the [Register a namespace](#register-a-namespace) section above.
 
-| `android {`<br>`     namespace = "io.github.kotlinhandson.fibonacci"`<br>` }` |
-| :---- |
+| `android {`<br>`     namespace = "io.github.kotlinhandson.fibonacci"`<br>`}` |
+|:-----------------------------------------------------------------------------|
 
 #### Set up the publishing plugin
 
