@@ -203,6 +203,8 @@ Click on the `New repository secret` button, and add the following secrets:
 - `SIGNING_PASSWORD` is the passphrase you’ve provided when generating your signing key.
 - `GPG_KEY_CONTENTS` should contain the contents of your GPG private key file, which you’ve created earlier in the [Export your private key](#export-your-private-key) section.
 
+#
+
 ![][image1]
 Note again that the names used for these secrets must match those used by the workflow that accesses their values.
 
