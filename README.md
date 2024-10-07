@@ -10,7 +10,7 @@ It has only one function: generate the [Fibonacci sequence](https://en.wikipedia
 
 Note that no other actions or tools usually required for the library development are set up, such as [tracking of backwards compatibility]
 (https://kotlinlang.org/docs/jvm-api-guidelines-backward-compatibility.html#tools-designed-to-enforce-backward-compatibility), explicit API mode,
-licensing, contribution guideline, code of conduct and others.
+licensing, contribution guideline, code of conduct and others. You can find a guide for best practices for designing Kotlin libraries [here.](https://kotlinlang.org/docs/api-guidelines-introduction.html)
 
 ## How to publish?
 
@@ -24,7 +24,7 @@ This guide describes the steps of publishing a library built with Kotlin Multipl
 This guide assumes that you are:
 
 - Creating an open-source library
-- Using macOS or Linux. If you are a Windows user, use [GnuPG or Gpg4win](https://gnupg.org/download/https://gnupg.org/download/) to generate a key pair.
+- Using macOS or Linux. If you are a Windows user, use [GnuPG or Gpg4win](https://gnupg.org/download) to generate a key pair.
 - Either not registered on Maven Central yet, or have an existing account that’s suitable for [publishing to the Central Portal](https://central.sonatype.org/publish-ea/publish-ea-guide/) (created after March 12th, 2024, or migrated to the Central Portal by their support)
 - Publishing your library in a GitHub repository
 - Using GitHub Actions for continuous integration
