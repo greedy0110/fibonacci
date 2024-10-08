@@ -55,28 +55,28 @@ mavenPublishing {
     coordinates("io.github.kotlin-hands-on", "fibonacci", "1.0.8")
 
     pom {
-        name.set("Fibonacci library")
-        description.set("A description of what my library does.")
-        inceptionYear.set("2024")
-        url.set("https://github.com/kotlin-hands-on/fibonacci/")
+        name = "Fibonacci library"
+        description = "A mathematics calculation library."
+        inceptionYear = "2024"
+        url = "https://github.com/kotlin-hands-on/fibonacci/"
         licenses {
             license {
-                name.set("The Apache License, Version 2.0")
-                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                name = "The Apache License, Version 2.0"
+                url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "http://www.apache.org/licenses/LICENSE-2.0.txt"
             }
         }
         developers {
             developer {
-                id.set("kotlin-hands-on")
-                name.set("Kotlin Developer Advocate")
-                url.set("https://github.com/kotlin-hands-on/")
+                id = "kotlin-hands-on"
+                name = "Kotlin Developer Advocate"
+                url = "https://github.com/kotlin-hands-on/"
             }
         }
         scm {
-            url.set("https://github.com/kotlin-hands-on/fibonacci/")
-            connection.set("scm:git:git://github.com/kotlin-hands-on/fibonacci.git")
-            developerConnection.set("scm:git:ssh://git@github.com/kotlin-hands-on/fibonacci.git")
+            url = "https://github.com/kotlin-hands-on/fibonacci/"
+            connection = "scm:git:git://github.com/kotlin-hands-on/fibonacci.git"
+            developerConnection = "scm:git:ssh://git@github.com/kotlin-hands-on/fibonacci.git"
         }
     }
 }
