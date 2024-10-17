@@ -2,14 +2,14 @@ import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-group = "io.github.kotlin-hands-on"
-version = "1.0.8"
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.publish)
+    alias(libs.plugins.vanniktech.mavenPublish)
 }
+
+group = "io.github.kotlin-hands-on"
+version = "1.0.8"
 
 kotlin {
     jvm()
@@ -52,7 +52,7 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates("io.github.kotlin-hands-on", "fibonacci", "1.0.8")
+    coordinates(group.toString(), "fibonacci", version.toString())
 
     pom {
         name = "Fibonacci library"
