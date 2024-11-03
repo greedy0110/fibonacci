@@ -8,8 +8,8 @@ plugins {
     alias(libs.plugins.vanniktech.mavenPublish)
 }
 
-group = "io.github.kotlin-hands-on"
-version = "1.0.8"
+group = "io.github.greedy0110"
+version = "1.0.0"
 
 kotlin {
     jvm()
@@ -40,7 +40,7 @@ kotlin {
 }
 
 android {
-    namespace = "io.github.kotlinhandson.fibonacci"
+    namespace = "io.github.greedy0110.fibonacci"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -56,9 +56,9 @@ mavenPublishing {
 
     pom {
         name = "Fibonacci library"
-        description = "A mathematics calculation library."
+        description = "A mathematics calculation library. (Test Test)"
         inceptionYear = "2024"
-        url = "https://github.com/kotlin-hands-on/fibonacci/"
+        url = "https://github.com/greedy0110/fibonacci"
         licenses {
             license {
                 name = "The Apache License, Version 2.0"
@@ -68,15 +68,15 @@ mavenPublishing {
         }
         developers {
             developer {
-                id = "kotlin-hands-on"
-                name = "Kotlin Developer Advocate"
-                url = "https://github.com/kotlin-hands-on/"
+                id = "greedy0110"
+                name = "Bean"
+                url = "https://github.com/greedy0110/"
             }
         }
-        scm {
-            url = "https://github.com/kotlin-hands-on/fibonacci/"
-            connection = "scm:git:git://github.com/kotlin-hands-on/fibonacci.git"
-            developerConnection = "scm:git:ssh://git@github.com/kotlin-hands-on/fibonacci.git"
+        scm { // Source Code Management information
+            url = "https://github.com/greedy0110/fibonacci"
+            connection = "scm:git:git://github.com/greedy0110/fibonacci.git"
+            developerConnection = "scm:git:ssh://git@github.com/greedy0110/fibonacci.git"
         }
     }
 }
